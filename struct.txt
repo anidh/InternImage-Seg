@@ -1,0 +1,143 @@
+.
+├── configs
+│   ├── ade20k
+│   │   ├── mask2former_internimage_h_896_80k_cocostuff2ade20k_ms.py
+│   │   ├── mask2former_internimage_h_896_80k_cocostuff2ade20k_ss.py
+│   │   ├── README.md
+│   │   ├── upernet_internimage_b_512_160k_ade20k.py
+│   │   ├── upernet_internimage_g_896_160k_ade20k.py
+│   │   ├── upernet_internimage_h_896_160k_ade20k.py
+│   │   ├── upernet_internimage_l_640_160k_ade20k.py
+│   │   ├── upernet_internimage_s_512_160k_ade20k.py
+│   │   ├── upernet_internimage_t_512_160k_ade20k.py
+│   │   └── upernet_internimage_xl_640_160k_ade20k.py
+│   ├── _base_
+│   │   ├── datasets
+│   │   ├── default_runtime.py
+│   │   ├── models
+│   │   └── schedules
+│   ├── cityscapes
+│   │   ├── README.md
+│   │   ├── segformer_internimage_l_512x1024_160k_mapillary2cityscapes.py
+│   │   ├── segformer_internimage_xl_512x1024_160k_mapillary2cityscapes.py
+│   │   ├── upernet_internimage_b_512x1024_160k_cityscapes.py
+│   │   ├── upernet_internimage_l_512x1024_160k_cityscapes.py
+│   │   ├── upernet_internimage_l_512x1024_160k_mapillary2cityscapes.py
+│   │   ├── upernet_internimage_s_512x1024_160k_cityscapes.py
+│   │   ├── upernet_internimage_t_512x1024_160k_cityscapes.py
+│   │   ├── upernet_internimage_xl_512x1024_160k_cityscapes.py
+│   │   ├── upernet_internimage_xl_512x1024_160k_iddaw.py
+│   │   ├── upernet_internimage_xl_512x1024_160k_idd.py
+│   │   └── upernet_internimage_xl_512x1024_160k_mapillary2cityscapes.py
+│   ├── coco_stuff164k
+│   │   ├── mask2former_internimage_h_896_80k_cocostuff164k_ss.py
+│   │   └── README.md
+│   └── mapillary
+│       ├── README.md
+│       ├── segformer_internimage_l_512x1024_80k_mapillary.py
+│       ├── segformer_internimage_xl_512x1024_80k_mapillary.py
+│       ├── upernet_internimage_l_512x1024_80k_mapillary.py
+│       └── upernet_internimage_xl_512x1024_80k_mapillary.py
+├── deploy
+│   ├── configs
+│   │   ├── _base_
+│   │   └── mmseg
+│   └── demo.png
+├── deploy.py
+├── dist_test.sh
+├── dist_train.sh
+├── get_flops.py
+├── image_demo.py
+├── infer.py
+├── mmcv_custom
+│   ├── custom_layer_decay_optimizer_constructor.py
+│   ├── __init__.py
+│   └── __pycache__
+│       ├── custom_layer_decay_optimizer_constructor.cpython-37.pyc
+│       └── __init__.cpython-37.pyc
+├── mmseg_custom
+│   ├── core
+│   │   ├── anchor
+│   │   ├── box
+│   │   ├── evaluation
+│   │   ├── __init__.py
+│   │   ├── mask
+│   │   ├── __pycache__
+│   │   └── utils
+│   ├── datasets
+│   │   ├── dataset_wrappers.py
+│   │   ├── iddaw.py
+│   │   ├── idd.py
+│   │   ├── __init__.py
+│   │   ├── mapillary.py
+│   │   ├── nyu_depth_v2.py
+│   │   ├── pipelines
+│   │   └── __pycache__
+│   ├── __init__.py
+│   ├── models
+│   │   ├── backbones
+│   │   ├── builder.py
+│   │   ├── decode_heads
+│   │   ├── __init__.py
+│   │   ├── losses
+│   │   ├── plugins
+│   │   ├── __pycache__
+│   │   ├── segmentors
+│   │   └── utils
+│   └── __pycache__
+│       └── __init__.cpython-37.pyc
+├── ops_dcnv3
+│   ├── functions
+│   │   ├── dcnv3_func.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   ├── make.sh
+│   ├── modules
+│   │   ├── dcnv3.py
+│   │   ├── __init__.py
+│   │   └── __pycache__
+│   ├── setup.py
+│   ├── src
+│   │   ├── cpu
+│   │   ├── cuda
+│   │   ├── dcnv3.h
+│   │   └── vision.cpp
+│   └── test.py
+├── README.md
+├── slurm_test.sh
+├── slurm_train.sh
+├── struct.txt
+├── test.py
+├── train.py
+└── work_dirs
+    ├── upernet_internimage_xl_512x1024_160k_idd
+    │   ├── 20240807_234117.log
+    │   ├── 20240807_234117.log.json
+    │   ├── 20240808_143440.log
+    │   ├── 20240808_143440.log.json
+    │   ├── 20240809_020035.log
+    │   ├── 20240809_020035.log.json
+    │   ├── 20240809_111546.log
+    │   ├── 20240809_111546.log.json
+    │   ├── 20240809_175459.log
+    │   ├── 20240809_175459.log.json
+    │   ├── 20240809_204209.log
+    │   ├── 20240809_204209.log.json
+    │   ├── 20240810_102127.log
+    │   ├── 20240810_102127.log.json
+    │   ├── best_mIoU_iter_32000.pth
+    │   ├── best_mIoU_iter_48000.pth
+    │   ├── iter_32000.pth
+    │   ├── iter_48000.pth
+    │   ├── latest.pth -> iter_48000.pth
+    │   └── upernet_internimage_xl_512x1024_160k_idd.py
+    └── upernet_internimage_xl_512x1024_160k_iddaw
+        ├── 20240810_130044.log
+        ├── 20240810_130044.log.json
+        ├── best_mIoU_iter_32000.pth
+        ├── iter_68800.pth
+        ├── iter_70400.pth
+        ├── latest.pth -> iter_70400.pth
+        └── upernet_internimage_xl_512x1024_160k_iddaw.py
+
+46 directories, 94 files
