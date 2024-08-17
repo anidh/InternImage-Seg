@@ -12,7 +12,7 @@ from mmseg.core import get_classes
 import cv2
 import os.path as osp
 import os
-
+import glob
 
 def test_single_image(model, img_name, out_dir, color_palette, opacity):
     result = inference_segmentor(model, img_name)
